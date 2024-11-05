@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- View Container -->
+    <style name="ContainerComponents">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">450dp</item>
+        <item name="android:background">@drawable/container_components</item>
+        <item name="android:layout_margin">30dp</item>
+    </style>
+
+    <!-- Calcule seus investimentos -->
+    <style name="Text_View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">120dp</item>
+        <item name="android:layout_marginRight">109dp</item>
+        <item name="android:layout_marginBottom">410dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Valor Inicial -->
+    <style name="Edit_Text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginTop">55dp</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+</resources>

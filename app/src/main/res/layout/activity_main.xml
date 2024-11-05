@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="2000dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_poupanca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- View Container -->
+    <View
+        android:id="@+id/viewContainer"
+        style="@style/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"/>
+
+    <!-- Calcule seus investimentos -->
+    <TextView
+        android:id="@+id/txtInvestimentos"
+        style="@style/Text_View"
+        android:text="Calcule Seus Investimentos"
+        android:textColor="@color/azul_escuro"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewContainer"
+        app:layout_constraintEnd_toEndOf="@+id/viewContainer"
+        app:layout_constraintStart_toStartOf="@+id/viewContainer"
+        app:layout_constraintTop_toTopOf="@+id/viewContainer" />
+
+    <!-- Valor Inicial -->
+    <EditText
+        android:id="@+id/edtValorInicial"
+        style="@style/Edit_Text"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/txtInvestimentos"
+        app:layout_constraintEnd_toEndOf="@+id/txtInvestimentos"
+        app:layout_constraintTop_toTopOf="@+id/txtInvestimentos"
+        android:hint="Digite o valor inicial"
+        android:inputType="numberDecimal" />
+
+    <!-- Aplicação Mensal -->
+    <EditText
+        android:id="@+id/edtAplicacaoMensal"
+        style="@style/Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/edtValorInicial"
+        app:layout_constraintStart_toStartOf="@+id/edtValorInicial"
+        app:layout_constraintTop_toTopOf="@+id/edtValorInicial"
+        android:hint="Digite a aplicação mensal"
+        android:inputType="numberDecimal"/>
+
+    <!-- Tempo de Meses -->
+    <EditText
+        android:id="@+id/edtTempoMeses"
+        style="@style/Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/edtAplicacaoMensal"
+        app:layout_constraintStart_toStartOf="@+id/edtAplicacaoMensal"
+        app:layout_constraintTop_toTopOf="@+id/edtAplicacaoMensal"
+        android:hint="Tempo de Meses (Ex: 3)"
+        android:inputType="numberDecimal"/>
+
+    <!-- Taxa de Juros -->
+    <EditText
+        android:id="@+id/edtTaxa"
+        style="@style/Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/edtTempoMeses"
+        app:layout_constraintStart_toStartOf="@+id/edtTempoMeses"
+        app:layout_constraintTop_toTopOf="@+id/edtTempoMeses"
+        android:hint="Taxa de Juros (Ex: 0.05)"
+        android:inputType="numberDecimal"/>
+
+        <!-- txt Calcular -->
+        <TextView
+            android:id="@+id/txtResultado"
+            style="@style/Text_View"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="@+id/edtTaxa"
+            app:layout_constraintStart_toStartOf="@+id/edtTaxa"
+            app:layout_constraintTop_toTopOf="@+id/edtTaxa"
+            android:gravity="center"
+            android:text="Resultado: "
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="620dp">
+
+        <!-- Botão Calcular -->
+
+        <!-- Botão Sair -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCalcular"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/molde_botoes"
+            android:text="Calcular"
+            android:textColor="@color/azul_escuro"
+            android:textAllCaps="false"
+            android:layout_marginLeft="50dp"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSair"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/molde_btnsair"
+            android:backgroundTint="#000000"
+            android:onClick="sair"
+            android:text="Sair"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Resultado -->
+</androidx.constraintlayout.widget.ConstraintLayout>
